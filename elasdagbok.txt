@@ -1,0 +1,23 @@
+Elas Dagbók
+
+Settum upp linked lista, búið að búa til Starfsmenn, rafeindadeild og málara afslátta.
+
+Shoppan kominn með 10 hluti, 4 fyrir málara, 5 fyrir raf og 1 sem er almennt
+
+Erum núna að vinna i node til þess að ná því til þess að vinna með nokkrum klössum í einu
+
+Viðskiptaivnir sem heldur utan um allt er komið líka
+
+
+
+
+hugmynd for future
+Vidskiptavinir{
+private:
+  int kt;
+  string nafn:
+
+}
+Vidskiptavinir::Malarar{
+    
+}
