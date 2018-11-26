@@ -1,0 +1,11 @@
+﻿Build started 26.11.2018 14:29:03.
+     1>Project "H:\00 Siðasta önn\c++\Lokaverkefni\Lokaverkefni\Lokaverkefni.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Lokaverkefni.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Lokaverkefni.cpp
+         Lokaverkefni.cpp
+     1>h:\00 siðasta önn\c++\lokaverkefni\lokaverkefni\lokaverkefni.cpp(58): error C2143: syntax error : missing ';' before '}'
+     1>Done Building Project "H:\00 Siðasta önn\c++\Lokaverkefni\Lokaverkefni\Lokaverkefni.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.80
