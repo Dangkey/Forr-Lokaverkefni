@@ -10,6 +10,7 @@ Rafverktakar fá 15% afslátt af öllum rafverktakahlutum
 Starfsmenn fá 20% afslátt af öllu í versluninni
 
 
+
 Við notum skráarvinnslu til þess að geyma kennitölurnar og afsláttinn, það raðast eftir nöfnum.
 
 Það er aðalklasi sem heldur yfir öllum notendum, og svo skiptist það í þrjá klasa inn í því sem eru fyrir hverja deild
