@@ -4,183 +4,47 @@
 #include "stdafx.h"
 #include <iostream>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
 
-class Node {
-public:
-	Malarar Mal;
-	Rafverktakar Raf;
-	Starfsmenn Starf;
-	Node *next;
-	Node(int kt, string nafn, int afslattur)
-	{
-		if (afslattur == 10)
-		{
-			Mal = Malarar(kt, nafn, afslattur);
-			next = nullptr;
-		}	
-		else if (afslattur == 15)
-		{
-			Raf = Rafverktakar(kt, nafn, afslattur);
-			next = nullptr;
-		}
-		else if(afslattur == 20)
-		{
-			Starf = Starfsmenn(kt, nafn, afslattur);
-			next = nullptr;
-		}
-	}
-	Node()
-	{
-	};
-};
-class LinkedList
-{
-private:
-	Node *head;
-public:
-	LinkedList()
-	{
-		head = nullptr;
-	}
-	void createNode(int kt, string nafn, int afslattur)
-	{
-		if (idExists(kt))
-		{
-			cout << "Cannot perform this operation: Flight with that id already exists" << endl;
-			return;
-		}
-		if (head == nullptr)
-		{
-			head = new Node(kt, nafn, afslattur);
-		}
-		else
-		{
-			Node *temp = new Node(id, capacity, reserved);
-			if (head->data.getId() > id)
-			{
-				temp->next = head;
-				head = temp;
-			}
-			else
-			{
-				Node *current = head;
-				Node *prev = head;
-				while (current && current->data.getId() < id)
-				{
-					prev = current;
-					current = current->next;
-				}
-				prev->next = temp;
-				temp->next = current;
-			}
-		}
-	}
-	void deleteNode(int id)
-	{
-		Node *current = new Node;
-		Node *prev = new Node;
-		current = head;
-		while (current != nullptr)
-		{
-			if (idExists(id))
-			{
-				if (current->data.getId() == id)
-				{
-					if (current == head)
-					{
-						head = head->next;
-						delete current;
-						break;
-					}
-					else
-					{
-						prev->next = current->next;
-						break;
-					}
-				}
-				{
-					prev = current;
-					current = current->next;
-				}
-			}
-			else
-			{
-				cout << "Cannot perform this operation: Flight with that id does not exist" << endl;
-				return;
-			}
-
-		}
-	}
-
-	void display()
-	{
-		Node *temp = new Node();
-		temp = head;
-		while (temp != nullptr)
-		{
-			temp->data.printStatus();
-			temp = temp->next;
-		}
-	}	
-	bool ktExists(int kt, int afslattur)
-	{
-		Node *temp = new Node;
-		temp = head;
-		while (temp != nullptr)
-		{
-			if (afslattur == 10)
-			{
-				if (temp->Mal.getId() == kt)
-				{
-					return true;
-					break;
-				}
-				else
-				{
-					temp = temp->next;
-				}
-			}
-			
-		}
-		return false;
-	}
-};
-
 class Malarar{
 private:
-	int kt;
+	string kt;
 	string nafn;
 	int afslattur;
 public:
-	Malarar() : kt(0), nafn(""), afslattur(10){};
-	Malarar(int kt, string nafn, int afslattur) : kt(kt), nafn(nafn){};
+	Malarar() : kt(""), nafn(""), afslattur(0){};
+	Malarar(string kt, string nafn, int afslattur) : kt(kt), nafn(nafn), afslattur(afslattur){};
+	string getKT() { return kt; };
 	void print(){
 		cout << kt << " : " << nafn << " : " << afslattur << "%" << endl;
 	};
+
 };
 class Rafverktakar{
 private:
-	int kt;
+	string kt;
 	string nafn;
 	int afslattur;
 public:
-	Rafverktakar() : kt(0),nafn(""), afslattur(15){};
-	Rafverktakar(int kt ,string nafn, int afslattur) : kt(kt),nafn(nafn){};
+	Rafverktakar() : kt(""),nafn(""), afslattur(0){};
+	Rafverktakar(string kt, string nafn, int afslattur) : kt(kt), nafn(nafn), afslattur(afslattur){};
+	string getKT() { return kt; };
 	void print(){
-		cout << kt << " : " << nafn << " : " << afslattur << "%" << endl;
+		cout <<kt << " : " << nafn << " : " << afslattur << "%" << endl;
 	};
 };
 class Starfsmenn{
 private:
-	int kt;
+	string kt;
 	string nafn;
 	int afslattur;
 public:
-	Starfsmenn() : kt(0), nafn(""), afslattur(20){};
-	Starfsmenn(int kt, string nafn,int afslattur) : kt(kt), nafn(nafn){};
+	Starfsmenn() : kt(""), nafn(""), afslattur(0){};
+	Starfsmenn(string kt, string nafn, int afslattur) : kt(kt), nafn(nafn), afslattur(afslattur){};
+	string getKT() { return kt; };
 	void print(){	
 		cout << kt << " : " << nafn << " : " << afslattur << "%" << endl;	
 	};
@@ -198,7 +62,7 @@ public:
 		*raf = Rafverktakar();
 		*starf = Starfsmenn();		
 	};
-	Vidskiptavinir(int kt, string nafn, int afslattur){
+	Vidskiptavinir(string kt, string nafn, int afslattur){
 		mal = new Malarar[10];
 		raf = new Rafverktakar[10];
 		starf = new Starfsmenn[10];
@@ -207,10 +71,242 @@ public:
 		{
 			for (int i = 0; i < 10; i++)
 			{
-				mal[i]
+				mal[i];
 			}
 		}
 	};	
+};
+
+
+
+class Node {
+public:
+	Malarar Mal;
+	Rafverktakar Raf;
+	Starfsmenn Starf;
+	Node *next;
+	Node(string kt, string nafn, int afslattur)
+	{
+		if (afslattur == 10)
+		{
+			Mal = Malarar(kt, nafn, afslattur);
+			next = nullptr;
+		}
+		else if (afslattur == 15)
+		{
+			Raf = Rafverktakar(kt, nafn, afslattur);
+			next = nullptr;
+		}
+		else if (afslattur == 20)
+		{
+			Starf = Starfsmenn(kt, nafn, afslattur);
+			next = nullptr;
+		}
+		else
+		{
+			cout << "fucked up";
+		}
+	}
+	Node()
+	{
+	};
+};
+
+
+class LinkedList
+{
+private:
+	Node *head;
+public:
+	LinkedList()
+	{
+		head = nullptr;
+	}
+	void createNode(string kt, string nafn, int afslattur)
+	{
+		if (ktExists(kt, afslattur))
+		{
+			cout << "Cannot perform this operation: Flight with that id already exists" << endl;
+			return;
+		}
+		if (head == nullptr)
+		{
+			head = new Node(kt, nafn, afslattur);
+		}
+		else
+		{
+			Node *temp = new Node(kt, nafn, afslattur);
+			if (afslattur == 10)
+			{
+				if (head->Mal.getKT() != kt)
+				{
+					temp->next = head;
+					head = temp;
+				}
+				else
+				{
+					Node *current = head;
+					Node *prev = head;
+					while (current && current->Mal.getKT() != kt)
+					{
+						prev = current;
+						current = current->next;
+					}
+					prev->next = temp;
+					temp->next = current;
+				}
+			}
+			else if (afslattur == 15)
+			{
+				if (head->Raf.getKT() != kt)
+				{
+					temp->next = head;
+					head = temp;
+				}
+				else
+				{
+					Node *current = head;
+					Node *prev = head;
+					while (current && current->Raf.getKT() != kt)
+					{
+						prev = current;
+						current = current->next;
+					}
+					prev->next = temp;
+					temp->next = current;
+				}
+			}
+			else if (afslattur == 20)
+			{
+				if (head->Starf.getKT() != kt)
+				{
+					temp->next = head;
+					head = temp;
+				}
+				else
+				{
+					Node *current = head;
+					Node *prev = head;
+					while (current && current->Starf.getKT() != kt)
+					{
+						prev = current;
+						current = current->next;
+					}
+					prev->next = temp;
+					temp->next = current;
+				}
+			}
+		}
+	}
+	/*void deleteNode(int id,int af)
+	{
+	Node *current = new Node;
+	Node *prev = new Node;
+	current = head;
+	while (current != nullptr)
+	{
+	if (ktExists(id,afslattur))
+	{
+	if (current->data.getId() == id)
+	{
+	if (current == head)
+	{
+	head = head->next;
+	delete current;
+	break;
+	}
+	else
+	{
+	prev->next = current->next;
+	break;
+	}
+	}
+	{
+	prev = current;
+	current = current->next;
+	}
+	}
+	else
+	{
+	cout << "Cannot perform this operation: Flight with that id does not exist" << endl;
+	return;
+	}
+
+	}
+	}
+	*/
+	void display()
+	{
+		Node *temp = new Node();
+		temp = head;
+		while (temp != nullptr)
+		{
+			temp->Mal.print();
+			temp = temp->next;
+		}
+		temp = head;
+		while (temp != nullptr)
+		{
+			temp->Raf.print();
+			temp = temp->next;
+		}
+		temp = head;
+		while (temp != nullptr)
+		{
+			temp->Starf.print();
+			temp = temp->next;
+		}
+	}
+	bool ktExists(string kt, int afslattur)
+	{
+		Node *temp = new Node;
+		temp = head;
+		while (temp != nullptr)
+		{
+			if (afslattur == 10)
+			{
+				if (temp->Mal.getKT() == kt)
+				{
+					return true;
+					break;
+				}
+				else
+				{
+					temp = temp->next;
+				}
+			}
+			else if (afslattur == 15)
+			{
+				if (temp->Raf.getKT() == kt)
+				{
+					return true;
+					break;
+				}
+				else
+				{
+					temp = temp->next;
+				}
+			}
+			else if (afslattur == 20)
+			{
+				if (temp->Starf.getKT() == kt)
+				{
+					return true;
+					break;
+				}
+				else
+				{
+					temp = temp->next;
+				}
+			}
+			else
+			{
+				cout << " beebooo" << endl;
+			}
+
+		}
+		return false;
+	}
 };
 
 
@@ -228,7 +324,7 @@ public:
 };
 
 int main()
-{
+{	
 	Shoppa shop[10];
 	shop[0] = Shoppa("Pensill            ", 999,"  Malningadeild");
 	shop[1] = Shoppa("Blondud malning 1L ",  1500," Malningadeild");
@@ -244,6 +340,18 @@ int main()
 	{
 		shop[i].print();
 	}
+	cout << "----------------" << endl;
+	LinkedList b = LinkedList();
+	b.createNode("2308992829", "Hilmar", 10);
+	b.createNode("2711912029", "Elas", 15);
+	b.createNode("0000000000", "Hilmar", 10);
+	b.createNode("1111111111", "Elas", 15);
+	b.createNode("1811992029", "Hilmar", 10);
+	b.createNode("3333333333", "Elas", 15);
+	b.createNode("0405994799", "Hilmar", 10);
+	b.createNode("2222222222", "Elas", 15);
+	b.display();
+	
 	return 0;
 }
 
