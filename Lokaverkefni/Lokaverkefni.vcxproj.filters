@@ -24,12 +24,54 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Malari.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rafverktaki.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sjoppa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Starfsmadur.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VidskiptavinirLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vidskiptavinur.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ViskiptavinurNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Lokaverkefni.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Malari.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rafverktaki.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sjoppa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Starfsmadur.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VidskiptavinirLinkedList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vidskiptavinur.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ViskiptavinurNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
