@@ -4,9 +4,6 @@
 
 Sjoppa::Sjoppa()
 {
-	void print(){
-		cout << item << " " << verd << "kr " << deild << endl;
-	}
 }
 
 
