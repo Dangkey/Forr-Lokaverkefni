@@ -10,9 +10,9 @@
 #include <string>
 #include <sstream>
 
-using namespace std;
 
-;/*
+using namespace std;
+/*
   class Vidskiptavinir{
   private:
   Malari *mal;
@@ -43,6 +43,7 @@ private:
 		node* next;
 		Malari dataMal;
 		Rafverktaki dataRaf;
+		Starfsmadur dataStarf;
 
 	}*nodePtr;
 	nodePtr head;
@@ -146,6 +147,53 @@ public:
 
 		}
 	}
+	void createNode(Starfsmadur *Starf)
+	{
+		Starfsmadur newStarf(*Starf);
+		nodePtr n = new node;
+		n->next = nullptr;
+		n->dataStarf = newStarf;
+		/*if (ktExists(kt, afslattur))
+		{
+		cout << "Cannot perform this operation: Flight with that id already exists" << endl;
+		return;
+		}*/
+		if (head != nullptr)
+		{
+			tail = head;
+			while (tail->next != nullptr)
+			{
+				tail = tail->next;
+
+			}
+			tail->next = n;
+		}
+		else
+		{
+			head = n;
+			head->next = nullptr;
+			return;
+			/*Node *temp = new Node(kt, nafn, afslattur, type);
+			if (head->Data.getKT() != kt)
+			{
+			temp->next = head;
+			head = temp;
+			}
+			else
+			{
+			Node *current = head;
+			Node *prev = head;
+			while (current && current->Data.getKT() != kt)
+			{
+			prev = current;
+			current = current->next;
+			}
+			prev->next = temp;
+			temp->next = current;
+			}*/
+
+		}
+	}
 	/*void deleteNode(int id,int af)
 	{
 	Node *current = new Node;
@@ -189,14 +237,18 @@ public:
 		syna = head;
 		while (syna != nullptr)
 		{
-			if (syna->dataMal.getKT() == "" && syna->dataRaf.getKT() != "")
+			if (syna->dataMal.getKT() == "" && syna->dataRaf.getKT() != "" && syna->dataStarf.getKT() == "")
 			{
 				syna->dataRaf.print();
 				syna = syna->next;
 			}
-			else
+			else if (syna->dataMal.getKT() != "" && syna->dataRaf.getKT() == "" && syna->dataStarf.getKT() == "")
 			{
 				syna->dataMal.print();
+				syna = syna->next;
+			}
+			else{
+				syna->dataStarf.print();
 				syna = syna->next;
 			}
 		}
@@ -207,15 +259,40 @@ public:
 		syna = head;
 		while (syna != nullptr)
 		{
-			if (head->dataMal.getKT() != kt)
+			if (syna->dataMal.getKT() == "" && syna->dataRaf.getKT() != "" && syna->dataStarf.getKT() == "")
 			{
-				syna->next = head;
-				head = syna;
+				while(head->dataRaf.getKT() != kt)
+				{
+					syna->next = head;
+					head = syna;
+				}				
+				return syna->dataRaf.getKT();
+
 			}
-			else
+			else if (syna->dataMal.getKT() != "" && syna->dataRaf.getKT() == "" && syna->dataStarf.getKT() == "")
 			{
-				return syna->dataMal.getKT();
-				break;
+				if (head->dataMal.getKT() != kt)
+				{
+					syna->next = head;
+					head = syna;
+				}
+				else
+				{
+					return syna->dataMal.getKT();
+				}
+			}
+			
+			else if (syna->dataMal.getKT() == "" && syna->dataRaf.getKT() == "" && syna->dataStarf.getKT() != "")
+			{
+				if (head->dataStarf.getKT() != kt)
+				{
+					syna->next = head;
+					head = syna;
+				}
+				else
+				{
+					return syna->dataStarf.getKT();
+				}
 			}
 
 		}
@@ -273,35 +350,51 @@ public:
 	}*/
 };
 
+class Shoppa{
+private:
+	string item;
+	int verd;
+	string deild;
+public:
+	Shoppa() : item(""), verd(0), deild(""){};
+	Shoppa(string item, int verd, string deild) : item(item), verd(verd), deild(deild){};
+	void print(){
+		cout << item << " " << verd << "kr " << deild << endl;
+	}
+};
+
 int main()
 {
 	Malari mal;
-	Sjoppa shop[10];
+	Rafverktaki raf;
+	Starfsmadur starf;
 
 	int adgangur;
 	string kennitala;
 	int kaupa;
-	int total = 0;
+	double total = 0.0;
+	double totaltemp = 0.0;
 	LinkedList b = LinkedList();
 	b.createNode(&Malari("2308992829", "Hilmar", 10));
-	b.createNode(&Rafverktaki("2711912029", "Elas", 15));
-	b.createNode(&Malari("0000000000", "Hilmar", 10));
-	b.createNode(&Rafverktaki("1111111111", "Elas", 15));
-	b.createNode(&Malari("1811992029", "Eggert", 10));
-	b.createNode(&Rafverktaki("3333333333", "Elas", 15));
-	b.createNode(&Malari("0405994799", "Hilmar", 10));
-	b.createNode(&Rafverktaki("2222222222", "Elas", 15));
+	b.createNode(&Malari("0000000000", "Peter", 10));
+	b.createNode(&Malari("1811992029", "Janus", 10));
+	b.createNode(&Malari("1826342309", "Dmitri", 10));
+	b.createNode(&Rafverktaki("0405994799", "Elas", 15));
+	b.createNode(&Rafverktaki("3333333333", "Eggert", 15));
+	b.createNode(&Starfsmadur("2222222222", "Geir", 20));
+	b.createNode(&Starfsmadur("2711912029", "Solvi", 20));
 
-	shop[0] = Sjoppa("1. Pensill            ", 999, "  Malningadeild");
-	shop[1] = Sjoppa("2. Blondud malning 1L ", 1500, " Malningadeild");
-	shop[2] = Sjoppa("3. Blondud malning 5L ", 6500, " Malningadeild");
-	shop[3] = Sjoppa("4. Blondud malning 10L", 11490, "Malningadeild");
-	shop[4] = Sjoppa("5. Vir 1M             ", 300, "   Rafindadeild");
-	shop[5] = Sjoppa("6. Netsnura 5M        ", 1500, "  Rafindadeild");
-	shop[6] = Sjoppa("7. HDMI Snura 10M     ", 2000, "  Rafindadeild");
-	shop[7] = Sjoppa("8. Klo                ", 500, "   Rafindadeild");
-	shop[8] = Sjoppa("9. Tenglarenna        ", 300000, "Rafindadeild");
-	shop[9] = Sjoppa("10.Twix               ", 999, "        Almennt");
+	Shoppa shop[10];
+	shop[0] = Shoppa("1. Pensill            ", 999, "  Malningadeild");
+	shop[1] = Shoppa("2. Blondud malning 1L ", 1500, " Malningadeild");
+	shop[2] = Shoppa("3. Blondud malning 5L ", 6500, " Malningadeild");
+	shop[3] = Shoppa("4. Blondud malning 10L", 11490, "Malningadeild");
+	shop[4] = Shoppa("5. Vir 1M             ", 300, "   Rafindadeild");
+	shop[5] = Shoppa("6. Netsnura 5M        ", 1500, "  Rafindadeild");
+	shop[6] = Shoppa("7. HDMI Snura 10M     ", 2000, "  Rafindadeild");
+	shop[7] = Shoppa("8. Klo                ", 500, "   Rafindadeild");
+	shop[8] = Shoppa("9. Tenglarenna        ", 300000, "Rafindadeild");
+	shop[9] = Shoppa("10.Twix               ", 999, "        Almennt");
 
 
 
@@ -327,25 +420,56 @@ int main()
 		while (kaupa != 0){
 			switch (kaupa){
 
-			case 1:				
-				if (b.getKT(kennitala) == kennitala)
+			case 1:	
+				total += 999;
+				while (b.getKT(kennitala) == kennitala)
 				{
-					b.display();
-					total += (999 * 0.9);					
+
+					totaltemp = total * 0.9;					
+					break;
 				}
-				cout << "Thu baettir vid pensil, Total: " << total << " kr." << endl;
+				total = totaltemp;
+					cout << "Thu baettir vid pensli, Total: " << total << " kr." << endl;
+				
 				break;
 			case 2:
 				total += 1500;
-				cout << "Thu baettir vid 1L af Malningu, Total: " << total << " kr." << endl;
+				while (b.getKT(kennitala) == kennitala)
+				{
+
+					totaltemp = total * 0.9;
+					total = totaltemp;
+
+					break;
+
+				}
+				cout << "Thu baettir vid 1L malningu, Total: " << total << " kr." << endl;
 				break;
 			case 3:
-				total += 6500;
-				cout << "Thu baettir vid 5L af Malningu, Total: " << total << " kr." << endl;
+				total += 4999;
+				while (b.getKT(kennitala) == kennitala)
+				{
+
+					totaltemp += total * 0.9;
+					total = totaltemp;
+
+					break;
+
+				}
+				cout << "Thu baettir vid 5L malningu, Total: " << total << " kr." << endl;
 				break;
 			case 4:
 				total += 11490;
-				cout << "Thu baettir vid 10L af Malningu, Total: " << total << " kr." << endl;
+				while (b.getKT(kennitala) == kennitala)
+				{
+
+					totaltemp += total * 0.9;
+					total = totaltemp;
+
+					break;
+
+				}
+				cout << "Thu baettir vid 10L malningu, Total: " << total << " kr." << endl;
 				break;
 			case 5:
 				int metra;
@@ -356,7 +480,15 @@ int main()
 				break;
 			case 6:
 				total += 1500;
-				cout << "Thu baettir vid 5M Netsnuru, Total: " << total << " kr." << endl;
+				if (b.getKT(kennitala) == kennitala)
+				{
+
+					totaltemp += total * 0.85;
+					cout << "Thu baettir vid 5M Netsnuru, Total: " << totaltemp << " kr." << endl;
+				}
+				else{
+					cout << "Thu baettir vid 5M Netsnuru, Total: " << total << " kr." << endl;
+				}
 				break;
 			case 7:
 				total += 2000;
@@ -390,3 +522,6 @@ int main()
 
 	return 0;
 }
+
+
+
