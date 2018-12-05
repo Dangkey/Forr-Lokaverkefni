@@ -1,45 +1,25 @@
-﻿Build started 3.12.2018 14:51:29.
+﻿Build started 5.12.2018 10:12:23.
      1>Project "N:\onn7\FOR\Forr-Lokaverkefni\Lokaverkefni\Lokaverkefni.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Lokaverkefni.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Lokaverkefni.cpp Sjoppa.cpp
-         Sjoppa.cpp
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\sjoppa.cpp(6): error C2084: function 'Sjoppa::Sjoppa(void)' already has a body
-                 n:\onn7\for\forr-lokaverkefni\lokaverkefni\sjoppa.h(15) : see previous definition of '{ctor}'
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\sjoppa.cpp(7): error C2601: 'print' : local function definitions are illegal
-                 n:\onn7\for\forr-lokaverkefni\lokaverkefni\sjoppa.cpp(6): this line contains a '{' which has not yet been matched
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\sjoppa.cpp(8): error C2065: 'item' : undeclared identifier
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\sjoppa.cpp(8): error C2065: 'verd' : undeclared identifier
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\sjoppa.cpp(8): error C2065: 'deild' : undeclared identifier
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\sjoppa.cpp(14): error C2600: 'Sjoppa::~Sjoppa' : cannot define a compiler-generated special member function (must be declared in the class first)
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Lokaverkefni.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Lokaverkefni.cpp Starfsmadur.cpp
+         Starfsmadur.cpp
          Lokaverkefni.cpp
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(315): error C2065: 'Sjoppa' : undeclared identifier
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(315): error C2146: syntax error : missing ';' before identifier 'shop'
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(315): error C2065: 'shop' : undeclared identifier
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(316): error C2065: 'shop' : undeclared identifier
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(316): error C3861: 'Sjoppa': identifier not found
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(317): error C2065: 'shop' : undeclared identifier
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(317): error C3861: 'Sjoppa': identifier not found
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(318): error C2065: 'shop' : undeclared identifier
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(318): error C3861: 'Sjoppa': identifier not found
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(319): error C2065: 'shop' : undeclared identifier
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(319): error C3861: 'Sjoppa': identifier not found
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(320): error C2065: 'shop' : undeclared identifier
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(320): error C3861: 'Sjoppa': identifier not found
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(321): error C2065: 'shop' : undeclared identifier
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(321): error C3861: 'Sjoppa': identifier not found
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(322): error C2065: 'shop' : undeclared identifier
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(322): error C3861: 'Sjoppa': identifier not found
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(323): error C2065: 'shop' : undeclared identifier
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(323): error C3861: 'Sjoppa': identifier not found
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(324): error C2065: 'shop' : undeclared identifier
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(324): error C3861: 'Sjoppa': identifier not found
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(325): error C2065: 'shop' : undeclared identifier
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(325): error C3861: 'Sjoppa': identifier not found
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(328): error C2065: 'shop' : undeclared identifier
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(328): error C2228: left of '.print' must have class/struct/union
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(334): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
          Generating Code...
-     1>Done Building Project "N:\onn7\FOR\Forr-Lokaverkefni\Lokaverkefni\Lokaverkefni.vcxproj" (Build target(s)) -- FAILED.
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(223): warning C4715: 'LinkedList::getKT' : not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"N:\onn7\FOR\Forr-Lokaverkefni\Debug\Lokaverkefni.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"N:\onn7\FOR\Forr-Lokaverkefni\Debug\Lokaverkefni.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"N:\onn7\FOR\Forr-Lokaverkefni\Debug\Lokaverkefni.lib" /MACHINE:X86 Debug\Lokaverkefni.obj
+         Debug\Malari.obj
+         Debug\Rafverktaki.obj
+         Debug\Sjoppa.obj
+         Debug\Starfsmadur.obj
+         Debug\stdafx.obj
+         Debug\VidskiptavinirLinkedList.obj
+         Debug\Vidskiptavinur.obj
+         Debug\ViskiptavinurNode.obj
+         Lokaverkefni.vcxproj -> N:\onn7\FOR\Forr-Lokaverkefni\Debug\Lokaverkefni.exe
+     1>Done Building Project "N:\onn7\FOR\Forr-Lokaverkefni\Lokaverkefni\Lokaverkefni.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:01.73
+Time Elapsed 00:00:11.67

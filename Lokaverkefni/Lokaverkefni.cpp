@@ -2,70 +2,34 @@
 //
 
 #include "stdafx.h"
+#include "Sjoppa.h"
+#include "Malari.h"
+#include "Rafverktaki.h"
+#include "Starfsmadur.h"
 #include <iostream>
 #include <string>
 #include <sstream>
 
 using namespace std;
 
-
-class Malarar{
-private:
-	string kt;
-	string nafn;
-	int afslattur;
-public:
-	Malarar() : kt(""), nafn(""), afslattur(10){};
-	Malarar(string kt, string nafn, int afslattur) : kt(kt), nafn(nafn), afslattur(afslattur){};
-	string getKT() { return kt; };
-	void print(){
-		cout << kt << " : " << nafn << " : " << afslattur << "%" << endl;
-	};
-
-};
-class Rafverktakar{
-private:
-	string kt;
-	string nafn;
-	int afslattur;
-public:
-	Rafverktakar() : kt(""), nafn(""), afslattur(15){};
-	Rafverktakar(string kt, string nafn, int afslattur) : kt(kt), nafn(nafn), afslattur(afslattur){};
-	string getKT() { return kt; };
-	void print(){
-		cout << kt << " : " << nafn << " : " << afslattur << "%" << endl;
-	};
-};
-class Starfsmenn{
-private:
-	string kt;
-	string nafn;
-	int afslattur;
-public:
-	Starfsmenn() : kt(""), nafn(""), afslattur(20){};
-	Starfsmenn(string kt, string nafn, int afslattur) : kt(kt), nafn(nafn), afslattur(afslattur){};
-	string getKT() { return kt; };
-	void print(){
-		cout << kt << " : " << nafn << " : " << afslattur << "%" << endl;
-	};
-};/*
+;/*
   class Vidskiptavinir{
   private:
-  Malarar *mal;
-  Rafverktakar *raf;
-  Starfsmenn *starf;
+  Malari *mal;
+  Rafverktaki *raf;
+  Starfsmadur *starf;
 
 
   public:
   Vidskiptavinir(){
-  *mal = Malarar();
-  *raf = Rafverktakar();
-  *starf = Starfsmenn();
+  *mal = Malari();
+  *raf = Rafverktaki();
+  *starf = Starfsmadur();
   };
   Vidskiptavinir(string kt, string nafn, int afslattur){
-  mal = new Malarar[10];
-  raf = new Rafverktakar[10];
-  starf = new Starfsmenn[10];
+  mal = new Malari[10];
+  raf = new Rafverktaki[10];
+  starf = new Starfsmadur[10];
 
 
   };
@@ -77,8 +41,8 @@ private:
 	typedef struct node
 	{
 		node* next;
-		Malarar dataMal;
-		Rafverktakar dataRaf;
+		Malari dataMal;
+		Rafverktaki dataRaf;
 
 	}*nodePtr;
 	nodePtr head;
@@ -88,9 +52,9 @@ public:
 	LinkedList()
 	{
 	}
-	void createNode(Malarar *Mal)
+	void createNode(Malari *Mal)
 	{
-		Malarar newMal(*Mal);
+		Malari newMal(*Mal);
 		nodePtr n = new node;
 		n->next = nullptr;
 		n->dataMal = newMal;
@@ -135,9 +99,9 @@ public:
 
 		}
 	}
-	void createNode(Rafverktakar *Raf)
+	void createNode(Rafverktaki *Raf)
 	{
-		Rafverktakar newRaf(*Raf);
+		Rafverktaki newRaf(*Raf);
 		nodePtr n = new node;
 		n->next = nullptr;
 		n->dataRaf = newRaf;
@@ -309,48 +273,35 @@ public:
 	}*/
 };
 
-class Shoppa{
-private:
-	string item;
-	int verd;
-	string deild;
-public:
-	Shoppa() : item(""), verd(0), deild(""){};
-	Shoppa(string item, int verd, string deild) : item(item), verd(verd), deild(deild){};
-	void print(){
-		cout << item << " " << verd << "kr " << deild << endl;
-	}
-};
-
 int main()
 {
-	Malarar mal;
+	Malari mal;
+	Sjoppa shop[10];
 
 	int adgangur;
 	string kennitala;
 	int kaupa;
 	int total = 0;
 	LinkedList b = LinkedList();
-	b.createNode(&Malarar("2308992829", "Hilmar", 10));
-	b.createNode(&Rafverktakar("2711912029", "Elas", 15));
-	b.createNode(&Malarar("0000000000", "Hilmar", 10));
-	b.createNode(&Rafverktakar("1111111111", "Elas", 15));
-	b.createNode(&Malarar("1811992029", "Hilmar", 10));
-	b.createNode(&Rafverktakar("3333333333", "Elas", 15));
-	b.createNode(&Malarar("0405994799", "Hilmar", 10));
-	b.createNode(&Rafverktakar("2222222222", "Elas", 15));
+	b.createNode(&Malari("2308992829", "Hilmar", 10));
+	b.createNode(&Rafverktaki("2711912029", "Elas", 15));
+	b.createNode(&Malari("0000000000", "Hilmar", 10));
+	b.createNode(&Rafverktaki("1111111111", "Elas", 15));
+	b.createNode(&Malari("1811992029", "Eggert", 10));
+	b.createNode(&Rafverktaki("3333333333", "Elas", 15));
+	b.createNode(&Malari("0405994799", "Hilmar", 10));
+	b.createNode(&Rafverktaki("2222222222", "Elas", 15));
 
-	Shoppa shop[10];
-	shop[0] = Shoppa("1. Pensill            ", 999, "  Malningadeild");
-	shop[1] = Shoppa("2. Blondud malning 1L ", 1500, " Malningadeild");
-	shop[2] = Shoppa("3. Blondud malning 5L ", 6500, " Malningadeild");
-	shop[3] = Shoppa("4. Blondud malning 10L", 11490, "Malningadeild");
-	shop[4] = Shoppa("5. Vir 1M             ", 300, "   Rafindadeild");
-	shop[5] = Shoppa("6. Netsnura 5M        ", 1500, "  Rafindadeild");
-	shop[6] = Shoppa("7. HDMI Snura 10M     ", 2000, "  Rafindadeild");
-	shop[7] = Shoppa("8. Klo                ", 500, "   Rafindadeild");
-	shop[8] = Shoppa("9. Tenglarenna        ", 300000, "Rafindadeild");
-	shop[9] = Shoppa("10.Twix               ", 999, "        Almennt");
+	shop[0] = Sjoppa("1. Pensill            ", 999, "  Malningadeild");
+	shop[1] = Sjoppa("2. Blondud malning 1L ", 1500, " Malningadeild");
+	shop[2] = Sjoppa("3. Blondud malning 5L ", 6500, " Malningadeild");
+	shop[3] = Sjoppa("4. Blondud malning 10L", 11490, "Malningadeild");
+	shop[4] = Sjoppa("5. Vir 1M             ", 300, "   Rafindadeild");
+	shop[5] = Sjoppa("6. Netsnura 5M        ", 1500, "  Rafindadeild");
+	shop[6] = Sjoppa("7. HDMI Snura 10M     ", 2000, "  Rafindadeild");
+	shop[7] = Sjoppa("8. Klo                ", 500, "   Rafindadeild");
+	shop[8] = Sjoppa("9. Tenglarenna        ", 300000, "Rafindadeild");
+	shop[9] = Sjoppa("10.Twix               ", 999, "        Almennt");
 
 
 

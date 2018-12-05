@@ -1,10 +1,18 @@
 #pragma once
 #include "Vidskiptavinur.h"
-class Malari :
-	public Vidskiptavinur
+#include <iostream>
+#include <string>
+using namespace std;
+class Malari
 {
+private:
+	string kt;
+	string nafn;
+	int afslattur;
 public:
 	Malari();
-	~Malari();
+	Malari(string kt, string nafn, int afslattur);
+	string getKT();
+	void print();
 };
 
