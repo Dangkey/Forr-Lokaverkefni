@@ -13,28 +13,28 @@
 
 using namespace std;
 /*
-  class Vidskiptavinir{
-  private:
-  Malari *mal;
-  Rafverktaki *raf;
-  Starfsmadur *starf;
+class Vidskiptavinir{
+private:
+Malari *mal;
+Rafverktaki *raf;
+Starfsmadur *starf;
 
 
-  public:
-  Vidskiptavinir(){
-  *mal = Malari();
-  *raf = Rafverktaki();
-  *starf = Starfsmadur();
-  };
-  Vidskiptavinir(string kt, string nafn, int afslattur){
-  mal = new Malari[10];
-  raf = new Rafverktaki[10];
-  starf = new Starfsmadur[10];
+public:
+Vidskiptavinir(){
+*mal = Malari();
+*raf = Rafverktaki();
+*starf = Starfsmadur();
+};
+Vidskiptavinir(string kt, string nafn, int afslattur){
+mal = new Malari[10];
+raf = new Rafverktaki[10];
+starf = new Starfsmadur[10];
 
 
-  };
-  };
-  */
+};
+};
+*/
 class LinkedList
 {
 private:
@@ -261,11 +261,11 @@ public:
 		{
 			if (syna->dataMal.getKT() == "" && syna->dataRaf.getKT() != "" && syna->dataStarf.getKT() == "")
 			{
-				while(head->dataRaf.getKT() != kt)
+				while (head->dataRaf.getKT() != kt)
 				{
 					syna->next = head;
 					head = syna;
-				}				
+				}
 				return syna->dataRaf.getKT();
 
 			}
@@ -281,7 +281,7 @@ public:
 					return syna->dataMal.getKT();
 				}
 			}
-			
+
 			else if (syna->dataMal.getKT() == "" && syna->dataRaf.getKT() == "" && syna->dataStarf.getKT() != "")
 			{
 				if (head->dataStarf.getKT() != kt)
@@ -384,17 +384,17 @@ int main()
 	b.createNode(&Starfsmadur("2222222222", "Geir", 20));
 	b.createNode(&Starfsmadur("2711912029", "Solvi", 20));
 
-	Shoppa shop[10];
-	shop[0] = Shoppa("1. Pensill            ", 999, "  Malningadeild");
-	shop[1] = Shoppa("2. Blondud malning 1L ", 1500, " Malningadeild");
-	shop[2] = Shoppa("3. Blondud malning 5L ", 6500, " Malningadeild");
-	shop[3] = Shoppa("4. Blondud malning 10L", 11490, "Malningadeild");
-	shop[4] = Shoppa("5. Vir 1M             ", 300, "   Rafindadeild");
-	shop[5] = Shoppa("6. Netsnura 5M        ", 1500, "  Rafindadeild");
-	shop[6] = Shoppa("7. HDMI Snura 10M     ", 2000, "  Rafindadeild");
-	shop[7] = Shoppa("8. Klo                ", 500, "   Rafindadeild");
-	shop[8] = Shoppa("9. Tenglarenna        ", 300000, "Rafindadeild");
-	shop[9] = Shoppa("10.Twix               ", 999, "        Almennt");
+	Sjoppa shop[10];
+	shop[0] = Sjoppa("1. Pensill            ", 999, "  Malningadeild");
+	shop[1] = Sjoppa("2. Blondud malning 1L ", 1500, " Malningadeild");
+	shop[2] = Sjoppa("3. Blondud malning 5L ", 6500, " Malningadeild");
+	shop[3] = Sjoppa("4. Blondud malning 10L", 11490, "Malningadeild");
+	shop[4] = Sjoppa("5. Vir 1M             ", 300, "   Rafindadeild");
+	shop[5] = Sjoppa("6. Netsnura 5M        ", 1500, "  Rafindadeild");
+	shop[6] = Sjoppa("7. HDMI Snura 10M     ", 2000, "  Rafindadeild");
+	shop[7] = Sjoppa("8. Klo                ", 500, "   Rafindadeild");
+	shop[8] = Sjoppa("9. Tenglarenna        ", 300000, "Rafindadeild");
+	shop[9] = Sjoppa("10.Twix               ", 999, "        Almennt");
 
 
 
@@ -420,17 +420,17 @@ int main()
 		while (kaupa != 0){
 			switch (kaupa){
 
-			case 1:	
+			case 1:
 				total += 999;
 				while (b.getKT(kennitala) == kennitala)
 				{
 
-					totaltemp = total * 0.9;					
+					totaltemp = total * 0.9;
 					break;
 				}
 				total = totaltemp;
-					cout << "Thu baettir vid pensli, Total: " << total << " kr." << endl;
-				
+				cout << "Thu baettir vid pensli, Total: " << total << " kr." << endl;
+
 				break;
 			case 2:
 				total += 1500;
