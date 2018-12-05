@@ -1,15 +1,45 @@
-﻿Build started 3.12.2018 14:55:07.
-     1>Project "C:\Users\0405994799\Desktop\Forr-Lokaverkefni-master\Lokaverkefni\Lokaverkefni.vcxproj" on node 2 (Build target(s)).
+﻿Build started 3.12.2018 14:51:29.
+     1>Project "N:\onn7\FOR\Forr-Lokaverkefni\Lokaverkefni\Lokaverkefni.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Lokaverkefni.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Lokaverkefni.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Lokaverkefni.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Lokaverkefni.cpp Sjoppa.cpp
+         Sjoppa.cpp
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\sjoppa.cpp(6): error C2084: function 'Sjoppa::Sjoppa(void)' already has a body
+                 n:\onn7\for\forr-lokaverkefni\lokaverkefni\sjoppa.h(15) : see previous definition of '{ctor}'
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\sjoppa.cpp(7): error C2601: 'print' : local function definitions are illegal
+                 n:\onn7\for\forr-lokaverkefni\lokaverkefni\sjoppa.cpp(6): this line contains a '{' which has not yet been matched
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\sjoppa.cpp(8): error C2065: 'item' : undeclared identifier
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\sjoppa.cpp(8): error C2065: 'verd' : undeclared identifier
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\sjoppa.cpp(8): error C2065: 'deild' : undeclared identifier
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\sjoppa.cpp(14): error C2600: 'Sjoppa::~Sjoppa' : cannot define a compiler-generated special member function (must be declared in the class first)
          Lokaverkefni.cpp
-     1>c:\users\0405994799\desktop\forr-lokaverkefni-master\lokaverkefni\lokaverkefni.cpp(387): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\0405994799\Desktop\Forr-Lokaverkefni-master\Debug\Lokaverkefni.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\0405994799\Desktop\Forr-Lokaverkefni-master\Debug\Lokaverkefni.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\0405994799\Desktop\Forr-Lokaverkefni-master\Debug\Lokaverkefni.lib" /MACHINE:X86 Debug\Lokaverkefni.obj
-         Debug\stdafx.obj
-         Lokaverkefni.vcxproj -> C:\Users\0405994799\Desktop\Forr-Lokaverkefni-master\Debug\Lokaverkefni.exe
-     1>Done Building Project "C:\Users\0405994799\Desktop\Forr-Lokaverkefni-master\Lokaverkefni\Lokaverkefni.vcxproj" (Build target(s)).
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(315): error C2065: 'Sjoppa' : undeclared identifier
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(315): error C2146: syntax error : missing ';' before identifier 'shop'
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(315): error C2065: 'shop' : undeclared identifier
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(316): error C2065: 'shop' : undeclared identifier
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(316): error C3861: 'Sjoppa': identifier not found
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(317): error C2065: 'shop' : undeclared identifier
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(317): error C3861: 'Sjoppa': identifier not found
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(318): error C2065: 'shop' : undeclared identifier
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(318): error C3861: 'Sjoppa': identifier not found
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(319): error C2065: 'shop' : undeclared identifier
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(319): error C3861: 'Sjoppa': identifier not found
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(320): error C2065: 'shop' : undeclared identifier
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(320): error C3861: 'Sjoppa': identifier not found
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(321): error C2065: 'shop' : undeclared identifier
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(321): error C3861: 'Sjoppa': identifier not found
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(322): error C2065: 'shop' : undeclared identifier
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(322): error C3861: 'Sjoppa': identifier not found
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(323): error C2065: 'shop' : undeclared identifier
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(323): error C3861: 'Sjoppa': identifier not found
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(324): error C2065: 'shop' : undeclared identifier
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(324): error C3861: 'Sjoppa': identifier not found
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(325): error C2065: 'shop' : undeclared identifier
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(325): error C3861: 'Sjoppa': identifier not found
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(328): error C2065: 'shop' : undeclared identifier
+     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(328): error C2228: left of '.print' must have class/struct/union
+         Generating Code...
+     1>Done Building Project "N:\onn7\FOR\Forr-Lokaverkefni\Lokaverkefni\Lokaverkefni.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:01.14
+Time Elapsed 00:00:01.73
