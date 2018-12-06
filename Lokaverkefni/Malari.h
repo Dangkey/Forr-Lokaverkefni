@@ -1,5 +1,4 @@
 #pragma once
-#include "Vidskiptavinur.h"
 #include <iostream>
 #include <string>
 using namespace std;

@@ -18,6 +18,6 @@ Sjoppa::Sjoppa(string item, int verd, string deild)
 	this->verd = verd;
 	this->deild = deild;
 }
-void Sjoppa::print(){
-		std::cout << item << " " << verd << "kr " << deild << endl;
+void Sjoppa::print(){	
+	cout << item << " " << verd << "kr " << deild << endl;
 }

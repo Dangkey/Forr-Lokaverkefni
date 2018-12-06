@@ -19,6 +19,7 @@ Malari::Malari(string kt, string nafn, int afslattur)
 	this->nafn = nafn;
 	this->afslattur = afslattur;
 }
+
 string Malari::getKT()
 {
 	return kt;

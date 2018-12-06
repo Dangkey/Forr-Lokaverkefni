@@ -1,25 +1,21 @@
-﻿Build started 5.12.2018 10:12:23.
-     1>Project "N:\onn7\FOR\Forr-Lokaverkefni\Lokaverkefni\Lokaverkefni.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Lokaverkefni.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Lokaverkefni.cpp Starfsmadur.cpp
-         Starfsmadur.cpp
-         Lokaverkefni.cpp
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(334): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-         Generating Code...
-     1>n:\onn7\for\forr-lokaverkefni\lokaverkefni\lokaverkefni.cpp(223): warning C4715: 'LinkedList::getKT' : not all control paths return a value
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"N:\onn7\FOR\Forr-Lokaverkefni\Debug\Lokaverkefni.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"N:\onn7\FOR\Forr-Lokaverkefni\Debug\Lokaverkefni.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"N:\onn7\FOR\Forr-Lokaverkefni\Debug\Lokaverkefni.lib" /MACHINE:X86 Debug\Lokaverkefni.obj
-         Debug\Malari.obj
-         Debug\Rafverktaki.obj
-         Debug\Sjoppa.obj
-         Debug\Starfsmadur.obj
-         Debug\stdafx.obj
-         Debug\VidskiptavinirLinkedList.obj
-         Debug\Vidskiptavinur.obj
-         Debug\ViskiptavinurNode.obj
-         Lokaverkefni.vcxproj -> N:\onn7\FOR\Forr-Lokaverkefni\Debug\Lokaverkefni.exe
-     1>Done Building Project "N:\onn7\FOR\Forr-Lokaverkefni\Lokaverkefni\Lokaverkefni.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:11.67
+﻿  Lokaverkefni.cpp
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(102): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(106): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(118): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(122): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(134): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(138): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(150): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(154): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(169): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(173): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(185): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(189): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(201): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(205): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(217): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(221): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(233): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(237): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\school\lokaverkefni\lokaverkefni\lokaverkefni.cpp(249): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  Lokaverkefni.vcxproj -> D:\School\Lokaverkefni\Debug\Lokaverkefni.exe

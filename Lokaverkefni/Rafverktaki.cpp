@@ -19,6 +19,7 @@ Rafverktaki::Rafverktaki(string kt, string nafn, int afslattur)
 	this->nafn = nafn;
 	this->afslattur = afslattur;
 }
+
 string Rafverktaki::getKT()
 {
 	return kt;
